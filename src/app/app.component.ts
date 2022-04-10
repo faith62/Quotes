@@ -7,10 +7,6 @@ import { Quotes } from './quotes';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quotes:Quotes[]=[
-    {id:1, name:'Hire character.Train skill'},
-    {id:2, name:'Hire character.Train skill'}
-  ];
   
  
 }
