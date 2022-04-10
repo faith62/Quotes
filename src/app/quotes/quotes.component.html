@@ -2,8 +2,9 @@
     <h1>QUOTES</h1>
     <hr>
     <div class="row">
-        <div >
-            <app-quotes-form></app-quotes-form>
+        
+        <div>
+            <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
         </div>
     
 

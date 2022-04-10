@@ -12,6 +12,13 @@ export class QuotesComponent implements OnInit {
     new Quotes('Faith Chemutai', 'Hire character.Train skill','By peter schutz', new Date(2020,10,2022)),
     
   ];
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes [index].showDescription;
   }
