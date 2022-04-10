@@ -9,8 +9,8 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes[]=[
-    {id:1, name:'Hire character.Train skill'},
-    {id:2, name:'Hire character.Train skill'}
+    {id:1, name:'Hire character.Train skill', description:'By peter schutz'},
+    
   ];
   
 
