@@ -1,12 +1,24 @@
 <div class="container">
-    <h1>Quotes</h1>
+    <h1>QUOTES</h1>
     <hr>
-
     <div class="row">
-        <div class="col-md-6">
+        <div >
+            <app-quotes-form></app-quotes-form>
+        </div>
+    
+
+    </div>
+    <div class="row">
+        <div>  ..</div>
+    </div>
+    
+    <div class="row">
+        
+        <div >
             <div *ngFor='let quote of quotes; let i =index'>
                 <div>
-                    <h4 >{{quote.name}} due on {{quote.completeDate | date}}</h4>
+                    <h6 >{{quote.quote}} due on {{quote.completeDate | date}}</h6>
+                    <h6>Added by: {{quote.name}}</h6>
                     <button (click)='toggleDetails(i)' class="btn btn-secondary">Toggle Details</button>
                 </div>
             
@@ -16,6 +28,7 @@
             </div>
                 
         </div>
+        
 
     </div>
 </div>

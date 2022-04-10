@@ -9,7 +9,7 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes[]=[
-    new Quotes(1, 'Hire character.Train skill','By peter schutz', new Date(2020,10,2022)),
+    new Quotes('Faith Chemutai', 'Hire character.Train skill','By peter schutz', new Date(2020,10,2022)),
     
   ];
   toggleDetails(index){
