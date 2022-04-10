@@ -12,6 +12,9 @@ export class QuotesComponent implements OnInit {
     new Quotes('Faith Chemutai', 'Hire character.Train skill','By peter schutz', new Date(2020,10,2022)),
     
   ];
+  preNum:number
+  lastNum:number
+  counter:number
 
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
@@ -33,6 +36,24 @@ export class QuotesComponent implements OnInit {
       
     }
   }
+
+  upvote(i){
+    this.quotes[i].upvotes+=1
+  }
+  downvote(i){
+    this.quotes[i].downvotes+=1
+  }
+  highestUpvote(){
+    this.preNum =0
+    this.lastNum=0
+    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+      this.lastNum = this.quotes[this.counter].upvotes;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
+  
+  }
+  
   
 
   constructor() { }
