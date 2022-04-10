@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 // import Quotes allows us to do Input property binding
 import { Quotes } from '../quotes';  
 
@@ -10,7 +10,12 @@ import { Quotes } from '../quotes';
 export class QuotesDetailComponent implements OnInit {
 
   // property quotes in the QuotesDetailComponent, it will have received its data from a parent component, in our case, the QuotesComponent.
-  @Input () quotes: Quotes;
+  @Input () quote: Quotes;
+  @Output ()isComplete =new EventEmitter<boolean>();
+
+  quoteComplete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
   constructor() { }
 
   ngOnInit() {

@@ -9,14 +9,23 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes[]=[
-    {id:1, name:'Hire character.Train skill', description:'By peter schutz'},
+    new Quotes(1, 'Hire character.Train skill','By peter schutz', new Date(2020,10,2022)),
     
   ];
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes [index].showDescription;
+  }
+
+  completeQuotes(isComplete, index){
+    if (isComplete){
+      this.quotes.splice(index,1);
+    }
+  }
   
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }

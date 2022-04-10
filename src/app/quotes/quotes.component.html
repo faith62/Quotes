@@ -1,11 +1,12 @@
-<div>
-    <h1>Quotes</h1>
-    <hr>
-    <ul>
-      <li *ngFor="let quote of quotes">
-        {{quote.name}}
-        
-        <app-quotes-detail [quotes] = "quotes"></app-quotes-detail>
-      </li>
-    </ul>
-  </div>
+
+<h1>Quotes</h1>
+<hr>
+<ul>
+    <div *ngFor='let quote of quotes; let i = index'>
+        <li>{{quote.name}} due on {{goal.completeDate | date}}</li>
+        <button (click)='toggleDetails(i)'>Toggle Details</button>
+        <!-- nest QuotesDetailComponent to quotesComponent after quote where its to display description -->
+        <app-quotes-detail *ngIf='quote.showDescription' [quote] = "quote" (isComplete)="completeQuotes($event,i)"></app-quotes-detail>
+    </div>
+</ul>
+
