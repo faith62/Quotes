@@ -19,14 +19,15 @@
         <div >
             <div class="myQuote" *ngFor='let quote of quotes; let i =index'>
                 <div>
-                    <h6 >{{quote.quote}} due on {{quote.completeDate | date}}</h6>
+                    <h6 >{{quote.quote}} written on  {{quote.completeDate | date}}</h6>
                     <h6>Added by: {{quote.name}}</h6>
-                    <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
-                    <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
+                    
                     <button (click)='toggleDetails(i)' class="btn btn-secondary">Toggle Details</button>
                 </div>
             
                 <div *ngIf="quote.showDescription">
+                    <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
+                    <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
                     <app-quotes-detail [quote] = "quote" (isComplete)="deleteQuote($event,i)"></app-quotes-detail>
                 </div>
             </div>
