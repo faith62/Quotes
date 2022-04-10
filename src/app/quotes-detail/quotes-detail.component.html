@@ -1,4 +1,16 @@
-<p>
-    Author: {{quote.description}}
-</p>
+<div class="container">
+    <p>
+        Author: {{quote.description}}
+    </p>
+    <!-- <p>
+        Upvotes: {{quote.upvotes}}
+    </p>
+    <p>
+        Downvotes: {{quote.downvotes}}
+    </p> -->
+
+</div>
+
 <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<button _ngcontent-c1 class="btn btn-success">Upvote</button>
+<button _ngcontent-c1 class="btn btn-warning">Downvote</button>
