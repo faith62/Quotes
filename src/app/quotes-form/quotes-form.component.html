@@ -6,7 +6,7 @@
         <div class="form-group">
   
             <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name" placeholder="Write your Name..." [(ngModel)]="newQuote.name" name="name" #name="ngModel" requied>
+            <input type="text" required class="form-control" id="name" placeholder="Write your Name..." [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                 <p>Name is required</p>
               </div>
@@ -16,13 +16,19 @@
         <div class="form-group">
   
             <label for="Quotes">Quotes</label>
-            <textarea class="form-control" id="input-quote" rows="2" required placeholder="Write your quote..."></textarea>
+            <textarea class="form-control" id="input-quote" rows="2" placeholder="Write your quote..." [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel"  required></textarea>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                <p>Quote is required</p>
+              </div>
   
         </div>
         <div class="form-group">
   
-            <label for="author">Author</label>
-            <input type="text" required class="form-control" id="author" placeholder="write author's name..." >
+            <label for="description">Author</label>
+            <input type="text" required class="form-control" id="author" placeholder="write author's name..." [(ngModel)]="newQuote.description" name="description" #description="ngModel" required >
+            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                <p>Author is required</p>
+              </div>
   
         </div>
         <button type="submit" class="btn btn-success">Add Quote</button>
