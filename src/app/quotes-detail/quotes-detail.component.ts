@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+// import Quotes allows us to do Input property binding
+import { Quotes } from '../quotes';  
 
 @Component({
   selector: 'app-quotes-detail',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesDetailComponent implements OnInit {
 
+  // property quotes in the QuotesDetailComponent, it will have received its data from a parent component, in our case, the QuotesComponent.
+  @Input () quotes: Quotes;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
