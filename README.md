@@ -1,6 +1,7 @@
 # Quotes
 ### Project description
  An application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. 
+ ![Landing Page](https://github.com/faith62/Quotes/blob/master/src/assets/quotes.png)
  ### By Faith Chemutai ,11/04/2022
  ## Setup/instalation Requirements
 *You need to have a vs code/ atom, angular CLI installed
