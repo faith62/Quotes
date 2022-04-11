@@ -6,12 +6,18 @@
 
 .container {
     /* text-align: center; */
-    height: 1000px;
+    height: 1500px;
     color: black;
    padding-top: 2%;
-    background-color: rgba(255, 255, 255, 0.74);
+    background-color: rgba(255, 255, 255, 0.795);
 }
-.container h1{
+.container h1,h5{
     text-align: center;
     
+}
+h1{
+    font-family: cursive;
+}
+h5{
+    font-family: sans-serif;
 }

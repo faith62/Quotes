@@ -8,6 +8,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesDetailComponent } from './quotes-detail/quotes-detail.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { HighlightDirective } from './highlight.directive';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HighlightDirective } from './highlight.directive';
     QuotesComponent,
     QuotesDetailComponent,
     QuotesFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    JumbotronComponent
   ],
   imports: [
     BrowserModule,
