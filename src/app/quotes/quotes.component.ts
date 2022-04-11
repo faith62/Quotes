@@ -11,14 +11,14 @@ export class QuotesComponent implements OnInit {
   quotes:Quotes[]=[
     new Quotes('Faith Chemutai', 'Hire character.Train skill','By peter schutz', new Date(2020,10,2022)),
     
-  ];
+  ]
   preNum:number
   lastNum:number
   counter:number
 
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
-    quote.id = quoteLength+1;
+    
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
@@ -28,7 +28,7 @@ export class QuotesComponent implements OnInit {
 
   deleteQuote(isComplete, index){
     if (isComplete){
-      let toDelete = confirm ('Are you sure you want to delete ${this.quotes[index].name}?')
+      let toDelete = confirm ('Are you sure you want to delete ${this.quotes[index].quote}?')
 
       if (toDelete){
         this.quotes.splice(index,1);
@@ -37,15 +37,11 @@ export class QuotesComponent implements OnInit {
     }
   }
 
-  upvote(i){
-    this.quotes[i].upvotes+=1
-  }
-  downvote(i){
-    this.quotes[i].downvotes+=1
-  }
+
   highestUpvote(){
     this.preNum =0
     this.lastNum=0
+
     for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
       this.lastNum = this.quotes[this.counter].upvotes;
       if(this.lastNum > this.preNum){this.preNum = this.lastNum}
